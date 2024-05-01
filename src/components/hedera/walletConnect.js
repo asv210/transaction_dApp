@@ -2,13 +2,9 @@ import { ethers } from "ethers";
 const network = "testnet";
 
 async function walletConnectFcn() {
-	console.log(`\n=======================================`);
-
-	// ETHERS PROVIDER
+	
 	const provider = new ethers.providers.Web3Provider(window.ethereum, "any");
 
-	// SWITCH TO HEDERA TEST NETWORK
-	console.log(`- Switching network to the Hedera ${network}...🟠`);
 	let chainId;
 	if (network === "testnet") {
 		chainId = "0x128";
